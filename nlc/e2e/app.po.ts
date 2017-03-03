@@ -6,6 +6,6 @@ export class NlcPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('nlc-app h1')).getText();
   }
 }

@@ -7,8 +7,8 @@ describe('nlc App', () => {
     page = new NlcPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Northland Chorale', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Northland Chorale');
   });
 });
