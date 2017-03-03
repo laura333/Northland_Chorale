@@ -27,11 +27,10 @@ import { TicketsComponent } from './tickets/tickets.component';
       { path: 'about', component: AboutComponent },
       { path: 'tickets', component: TicketsComponent },
       { path: 'welcome', component: WelcomeComponent },
-      // { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      // { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
       // TODO: 404 component and html { path: '**', component: PageNotFoundComponent },
     ]),
-    // TicketModule
   ],
   providers: [],
   bootstrap: [AppComponent]
