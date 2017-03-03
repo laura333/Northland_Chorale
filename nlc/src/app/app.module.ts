@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { AboutComponent } from './about/about.component';
-// import { TicketsComponent } from './tickets/tickets.component';
+import { TicketsComponent } from './tickets/tickets.component';
 
 /* Feature Modules */
 // import { TicketModule } from './tickets/tickets.module';
@@ -16,8 +16,8 @@ import { AboutComponent } from './about/about.component';
   declarations: [
     AppComponent,
     WelcomeComponent,
-    AboutComponent
-    // TicketsComponent
+    AboutComponent,
+    TicketsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +25,7 @@ import { AboutComponent } from './about/about.component';
     HttpModule,
     RouterModule.forRoot([
       { path: 'about', component: AboutComponent },
-      // { path: 'tickets', component: TicketsComponent },
+      { path: 'tickets', component: TicketsComponent },
       { path: 'welcome', component: WelcomeComponent },
       // { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       // { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
