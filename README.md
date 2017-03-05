@@ -1,5 +1,5 @@
 # Northland Chorale
-Laura Baukol's g36 capstone project
+Laura Baukol's g36 capstone project - frontend
 
 **Project Plan & Wireframes:**  
 http://baukol-capstone-project-plan.surge.sh  
