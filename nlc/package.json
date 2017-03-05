@@ -1,7 +1,8 @@
 {
   "name": "nlc",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "1.0.0",
+  "author": "Laura Baukol",
+  "description": "website for community show choir",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,6 +12,7 @@
     "e2e": "ng e2e"
   },
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@angular/common": "^2.4.0",
     "@angular/compiler": "^2.4.0",
