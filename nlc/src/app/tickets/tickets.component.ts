@@ -1,35 +1,71 @@
 import { Component, OnInit, Renderer } from '@angular/core';
+import { Product } from './products/product';
+import { CartEntity } from './cart/cart.entity';
+import { ProductService } from './products/product.service';
+import { CartService } from './cart/cart.service';
 
 @Component({
   // moduleId: module.id,
   selector: 'tickets',
   templateUrl: './tickets.component.html',
-  styleUrls: ['./tickets.component.css']
+  styleUrls: ['./tickets.component.css'],
+  providers: [ProductService, CartService]
 })
+
 export class TicketsComponent implements OnInit {
 
-  constructor(private renderer: Renderer) { }
+  selectedProduct: Product;
+  products: Product[];
+  visableProducts: Product[];
+  product: Product;
+  filterVal = "";
 
-  ngOnInit() {
+  constructor(private renderer: Renderer, private productService: ProductService, private cartService: CartService) {
   }
 
-  openCheckout() {
-    var handler = (<any>window).StripeCheckout.configure({
-      key: 'pk_test_MlnEwz9cJz5t78rk5wT4eS4v',
-      image: "https://s3.amazonaws.com/stripe-uploads/acct_19q721CW6OOcqpDhmerchant-icon-1487890697833-note.png",
-      locale: 'auto',
-      token: function(token: any) {
+  ngOnInit(): void {
+    this.getProducts();
+  }
 
-        // You can access the token ID with `token.id`.
-        // Get the token ID to your server-side code for use.
+  fiter(): void {
+    this.visableProducts = this.products.filter(product => product.description.toLowerCase().includes(this.filterVal.toLowerCase()));
+  }
+
+  onSelect(product: Product): void {
+    this.selectedProduct = product;
+  }
+
+  appendItem(product: Product): void {
+    // get the cart entry for the product
+    this.cartService.getCartEntryByProductId(product.id).then(function(cartEntry: CartEntity) {
+
+      // if product quantity hasn't been exeeded
+      if (this.checkIfCapacityIsExeeded(cartEntry)) {
+        this.cartService.addProductToCart(product);
+        this.router.navigate(['cart']);
+      } else {
+        // TODO: change this one to a modal later on, if needed
+        alert("We are sold out of tickets. You currently have " + cartEntry.quantity + " of tickets in your cart. We have these dates available " + cartEntry.product.capacity);
       }
-    });
 
-    handler.open({
-      name: 'Northland Chorale',
-      description: 'tickets to "30 Years of Broadway"',
-      amount: 1500
-    });
+    }.bind(this));
+
   }
 
+  checkIfCapacityIsExeeded(cartEntry: CartEntity): boolean {
+    return cartEntry == undefined || (cartEntry.quantity + 1 <= cartEntry.product.capacity)
+  }
+
+  // getProducts(): void {
+  //   this.productService.getProducts().then(products => this.products = products);
+  // }
+
+  getProducts(): void {
+    this.productService.getProducts().then(function(result) {
+      this.products = result;
+      this.visibleProducts = result;
+    }.bind(this), function(err) {
+      alert("Oops. Something went wrong while fetching the tickets.");
+    });
+  }
 }

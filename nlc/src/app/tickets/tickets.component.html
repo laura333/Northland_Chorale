@@ -4,4 +4,17 @@
 
 <h2>Purchase tickets securely online to "30 Years of Broadway"!</h2>
 
+<div class="grid grid-pad">
+    <div *ngFor="let product of products">
+        <div class="module product">
+          {{product.date}}: {{product.description}}
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <button class="btn btn-default add-to-cart-button" (click)="appendItem(product)">Add to cart</button>
+</div> -->
+
+
 <button class="stripe-button" (click)="openCheckout()">Purchase</button>
