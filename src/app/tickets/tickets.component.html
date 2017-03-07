@@ -1,0 +1,41 @@
+<!-- <p>
+  This is the Tickets component!
+</p> -->
+
+<h2>Tickets</h2>
+<div class="row">
+  <div class="product-list-header col-sm-12 col-md-10 col-md-offset-1">
+    <!-- <div class="col-sm-6 ">
+    </div> -->
+    <!-- <div class="col-sm-6">
+      <input type="text" class="form-control" [(ngModel)]="filterVal" placeholder="Type here to filter" (keyup)="filter()">
+    </div> -->
+  </div>
+</div>
+<div class="row">
+  <div class="product-list col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row product-item" *ngFor="let product of products" [class.selected]="product === selectedProduct" (click)="onSelect(product)">
+      <div class="col-sm-10">
+        <h3>{{product.category}}, {{product.description}}</h3>
+        <div class="small">
+          <!-- <span class="stockstatus-availability-label">Date & Time:</span> -->
+          <h4>{{product.date}}, {{product.time}}</h4>
+        </div>
+      </div>
+      <!-- end of left column -->
+
+      <div class="col-sm-2">
+        <div class="row">
+          <p class="product-price">{{product.price|currency:'USD':true}}</p>
+        </div>
+        <div class="row">
+          <a [routerLink]="['/cart']">
+            <button class="btn btn-default add-to-cart-button" (click)="appendItem(product)">Add to cart</button>
+          </a>
+        </div>
+      </div>
+      <!-- end of right column -->
+
+    </div>
+  </div>
+</div>

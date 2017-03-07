@@ -1,0 +1,39 @@
+.divider {
+  height: 50px;
+}
+
+/*section {*/
+  /*height: 100%;*/
+  /*height: 610px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: auto;
+}*/
+
+.bg-1 {
+  background: url("../../assets/img/Spring2016.jpg") no-repeat center center fixed;
+  color: #fff;
+  background-size: cover;
+  height: 610px;
+  /*padding-top: 50px;*/
+  padding-bottom: 50px;
+  overflow: auto;
+}
+
+.bg-2 {
+  background: url("../../assets/img/Fall2016.jpg") no-repeat bottom center fixed;
+  color: #fff;
+  background-size: cover;
+  height: 610px;
+  /*padding-top: 50px;
+  padding-bottom: 50px;*/
+  overflow: auto;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
+
+@media only screen and (max-device-width: 1024px) {
+  .bg-1, .bg-2 {
+    background-attachment: scroll;
+  }
+}
