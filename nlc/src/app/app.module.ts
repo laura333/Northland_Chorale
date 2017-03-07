@@ -13,9 +13,6 @@ import { CartService } from './tickets/cart/cart.service';
 import { CartComponent } from './tickets/cart/cart.component';
 import { SumPipe } from './tickets/cart/sum.pipe';
 
-/* Feature Modules */
-// import { TicketModule } from './tickets/tickets.module';
-
 @NgModule({
   imports: [
     BrowserModule,
