@@ -42,7 +42,7 @@ export class TicketsComponent implements OnInit {
       // if product quantity hasn't been exeeded
       if (this.checkIfCapacityIsExeeded(cartEntry)) {
         this.cartService.addProductToCart(product);
-        this.router.navigate(['cart']);
+        // this.router.navigate(['cart']);
       } else {
         // TODO: change this one to a modal later on, if needed
         alert("We are sold out of tickets. You currently have " + cartEntry.quantity + " of tickets in your cart. We have these dates available " + cartEntry.product.capacity);

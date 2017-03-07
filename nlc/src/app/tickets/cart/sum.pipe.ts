@@ -4,9 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'sum'
 })
 export class SumPipe implements PipeTransform {
-
-  transform(value: number, args: string[]): any {
-    var quantity = parseInt(args[0]);
+  transform(value: number, multiples: string): number {
+    let quantity = parseFloat(multiples);
     return quantity * value;
   }
 }

@@ -83,8 +83,7 @@ export class CartComponent implements OnInit {
     handler.open({
       name: 'Northland Chorale',
       description: 'tickets to "30 Years of Broadway"',
-      amount: this.totalSum
+      amount: this.totalSum * 100
     });
   }
-
 }

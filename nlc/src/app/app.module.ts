@@ -23,8 +23,8 @@ import { SumPipe } from './tickets/cart/sum.pipe';
       { path: 'tickets', component: TicketsComponent },
       { path: 'welcome', component: WelcomeComponent },
       { path: 'cart', component: CartComponent },
-      // { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      // { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
       // TODO: 404 component and html { path: '**', component: PageNotFoundComponent },
     ]),
   ],

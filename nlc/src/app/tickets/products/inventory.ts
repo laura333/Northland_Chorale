@@ -7,7 +7,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 7, 2017",
     "time": "7:30 p.m.",
     "description": "Adult Ticket",
-    "price": 15.00,
+    "price": 15,
     "capacity": 150
   },
   {
@@ -16,7 +16,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 7, 2017",
     "time": "7:30 p.m.",
     "description": "Senior/Student Ticket",
-    "price": 12.00,
+    "price": 12,
     "capacity": 150
   },
   {
@@ -25,7 +25,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 7, 2017",
     "time": "7:30 p.m.",
     "description": "Child Ticket",
-    "price": 8.00,
+    "price": 8,
     "capacity": 150
   },
   {
@@ -34,7 +34,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 7, 2017",
     "time": "7:30 p.m.",
     "description": "Group Ticket",
-    "price": 10.00,
+    "price": 10,
     "capacity": 150
   },
   {
@@ -43,7 +43,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 8, 2017",
     "time": "7:30 p.m.",
     "description": "Adult Ticket",
-    "price": 15.00,
+    "price": 15,
     "capacity": 150
   },
   {
@@ -52,7 +52,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 8, 2017",
     "time": "7:30 p.m.",
     "description": "Senior/Student Ticket",
-    "price": 12.00,
+    "price": 12,
     "capacity": 150
   },
   {
@@ -61,7 +61,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 8, 2017",
     "time": "7:30 p.m.",
     "description": "Child Ticket",
-    "price": 8.00,
+    "price": 8,
     "capacity": 150
   },
   {
@@ -70,7 +70,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 8, 2017",
     "time": "7:30 p.m.",
     "description": "Group Ticket",
-    "price": 10.00,
+    "price": 10,
     "capacity": 150
   }, {
     "id": 9,
@@ -78,7 +78,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 9, 2017",
     "time": "7:30 p.m.",
     "description": "Adult Ticket",
-    "price": 15.00,
+    "price": 15,
     "capacity": 150
   },
   {
@@ -87,7 +87,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 9, 2017",
     "time": "7:30 p.m.",
     "description": "Senior/Student Ticket",
-    "price": 12.00,
+    "price": 12,
     "capacity": 150
   },
   {
@@ -96,7 +96,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 9, 2017",
     "time": "7:30 p.m.",
     "description": "Child Ticket",
-    "price": 8.00,
+    "price": 8,
     "capacity": 150
   },
   {
@@ -105,7 +105,7 @@ export var PRODUCTS: Product[] = [
     "date": "April 9, 2017",
     "time": "7:30 p.m.",
     "description": "Group Ticket",
-    "price": 10.00,
+    "price": 10,
     "capacity": 150
   }
 ];

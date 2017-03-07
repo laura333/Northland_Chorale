@@ -2,7 +2,83 @@
   <p>This is the Cart component!</p>
 </div> -->
 
-<h2>Purchase tickets securely online to "30 Years of Broadway"!</h2>
+<h2>Cart</h2>
+<div class="row">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <p class="bg-info" *ngIf="cartEntities && cartEntities.length == 0">... is empty</p>
 
+    <div class="table-responsive">
+      <table class="table table-hover" *ngIf="cartEntities &&  cartEntities.length > 0">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th class="hidden-xs">Quantity</th>
+            <th class="text-center hidden-xs">Price</th>
+            <th class="text-center">Total</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cartEntity of cartEntities">
+            <td class="col-sm-8 col-md-6">
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="media-heading"><p href="#">{{cartEntity.product.description}}, {{cartEntity.product.category}}, {{ cartEntity.product.date}}, {{ cartEntity.product.time}}</p></h4>
+                </div>
+              </div>
+            </td>
 
-<button class="stripe-button" (click)="openCheckout()">Purchase</button>
+            <td class="col-sm-1 col-md-1 hidden-xs" style="text-align: center">
+              <span (click)="changeQuantity(cartEntity.product.id,-1)" class="glyphicon glyphicon-minus pointer"></span>{{cartEntity.quantity}}<span (click)="changeQuantity(cartEntity.product.id,1)" class="glyphicon glyphicon-plus pointer"></span>
+            </td>
+
+            <td class="col-sm-1 col-md-1 text-center hidden-xs"><strong>{{cartEntity.product.price|currency:'USD':true}}</strong>
+            </td>
+
+            <td class="col-sm-1 col-md-1 text-center "><strong>{{cartEntity.product.price | sum: cartEntity.quantity | currency:'USD':true}}</strong>
+            </td>
+
+            <td class="col-sm-1 col-md-1">
+              <button type="button" (click)="removeByProductId(cartEntity.product.id)" class="btn btn-danger"> <span class="glyphicon glyphicon-remove"></span>
+                Remove
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="hidden-xs">   </td>
+            <td class="hidden-xs">   </td>
+            <td>   </td>
+
+            <td>
+              <h3>Total</h3></td>
+            <td class="text-right">
+              <h3><strong>{{totalSum|currency:'USD':true}}</strong></h3></td>
+          </tr>
+
+          <tr>
+            <td class="hidden-xs">   </td>
+            <td class="hidden-xs">   </td>
+            <td>   </td>
+
+            <td>
+              <a [routerLink]="['/tickets']">
+                <button type="button" class="btn btn-default">
+                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                  Continue Shopping
+                </button>
+              </a>
+            </td>
+
+            <td>
+              <!-- <button type="button" class="btn btn-success">
+                        Checkout <span class="glyphicon glyphicon-play"></span>
+                    </button> -->
+              <button class="stripe-button" (click)="openCheckout()">Purchase</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
