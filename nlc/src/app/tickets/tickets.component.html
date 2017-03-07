@@ -29,7 +29,9 @@
           <p class="product-price">{{product.price|currency:'USD':true}}</p>
         </div>
         <div class="row">
-          <button class="btn btn-default add-to-cart-button" (click)="appendItem(product)">Add to cart</button>
+          <a [routerLink]="['/cart']">
+            <button class="btn btn-default add-to-cart-button" (click)="appendItem(product)">Add to cart</button>
+          </a>
         </div>
       </div>
       <!-- end of right column -->

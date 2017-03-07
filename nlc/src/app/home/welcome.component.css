@@ -14,7 +14,7 @@
   background: url("../../assets/img/Spring2016.jpg") no-repeat center center fixed;
   color: #fff;
   background-size: cover;
-  height: 575px;
+  height: 610px;
   /*padding-top: 50px;*/
   padding-bottom: 50px;
   overflow: auto;
@@ -25,18 +25,9 @@
   color: #fff;
   background-size: cover;
   height: 610px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  /*padding-top: 50px;
+  padding-bottom: 50px;*/
   overflow: auto;
-}
-
-#footer {
-  height: 60px;
-  background-color: #4DCAC0;
-  margin-top: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: white;
 }
 
 /* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
