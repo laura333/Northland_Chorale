@@ -43,14 +43,13 @@ export class CartComponent implements OnInit {
   }
 
   changeQuantity(productId: number, valueChange: number) {
-
-    // find the CartEntity we are searching for and perform the action
+    // find the CartEntity and perform the action
     let cartEntry = this.cartEntities.find(entry => entry.product.id === productId);
 
     let newValue = cartEntry.quantity + valueChange;
 
     console.log(newValue, cartEntry.product.capacity);
-    // just verify that the user wont do a action that is not permited. ie reduce to 0 or over max
+    // verify that user won't do an action that is not permited like reduce to 0 or over max capacity
     if (newValue > 0 && newValue <= cartEntry.product.capacity) {
       // set the new value
       cartEntry.quantity = newValue;
@@ -59,12 +58,8 @@ export class CartComponent implements OnInit {
       // save to localStorage
       this.cartService.saveListOfCartEntities(this.cartEntities);
     }
-
   }
-  /**
-  * Recalculates a new totalMax.
-  *
-  **/
+
   calcMax() {
     let totalSum = 0;
     this.cartEntities.forEach(function(entity) {
