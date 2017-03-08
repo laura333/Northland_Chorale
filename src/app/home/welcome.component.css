@@ -14,9 +14,9 @@
   background: url("../../assets/img/Spring2016.jpg") no-repeat center center fixed;
   color: #fff;
   background-size: cover;
-  height: 610px;
+  height: 575px;
   /*padding-top: 50px;*/
-  padding-bottom: 50px;
+  /*padding-bottom: 500px;*/
   overflow: auto;
 }
 
@@ -24,7 +24,7 @@
   background: url("../../assets/img/Fall2016.jpg") no-repeat bottom center fixed;
   color: #fff;
   background-size: cover;
-  height: 610px;
+  height: 575px;
   /*padding-top: 50px;
   padding-bottom: 50px;*/
   overflow: auto;
