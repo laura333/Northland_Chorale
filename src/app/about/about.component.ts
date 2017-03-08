@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Carousel } from './carousel';
+import { IMAGES } from './images';
 
 @Component({
   selector: 'about',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  public images = IMAGES;
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
