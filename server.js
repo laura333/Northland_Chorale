@@ -3,12 +3,39 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+// const keyPublishable = process.env.PUBLISHABLE_KEY;
+// const keySecret = process.env.SECRET_KEY;
+// const stripe = require("stripe")(keySecret);
+
+// Run the app by serving the static files
+// in the dist directory
+app.use(express.static(__dirname + '/dist'));
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
+
+// app.post("/charge", (req, res) => {
+//   let amount = this.totalSum * 100;
+//   let image: "https://s3.amazonaws.com/stripe-uploads/acct_19q721CW6OOcqpDhmerchant-icon-1487890697833-note.png";
+//
+//   stripe.customers.create({
+//       email: req.body.stripeEmail,
+//       source: req.body.stripeToken
+//     })
+//     .then(customer =>
+//       stripe.charges.create({
+//         image,
+//         amount,
+//         name: "Northland Chorale",
+//         description: 'tickets to "30 Years of Broadway"',
+//         currency: "usd",
+//         customer: customer.id
+//       }))
+//     .then(charge => res.render("/cart"));
+// });
 
 // If an incoming request uses
 // a protocol other than HTTPS,
@@ -30,9 +57,6 @@ app.get('/*', function(req, res) {
 // // middleware
 // app.use(forceSSL());
 
-// Run the app by serving the static files
-// in the dist directory
-app.use(express.static(__dirname + '/dist'));
 // Start the app by listening on the default
 // Heroku port
 app.listen(process.env.PORT || 8080);
