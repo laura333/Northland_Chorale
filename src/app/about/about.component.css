@@ -37,7 +37,7 @@ padding-bottom: 50px;
 }
 .carousel h2{
     margin-bottom: 0;
-    font-size:1em;
+    /*font-size:1em;*/
     padding:1.5em 0.5em 1.5em 0.5em;
     position:absolute;
     right:0px;
@@ -46,7 +46,7 @@ padding-bottom: 50px;
     text-align:center;
     color:#fff;
     background-color:rgba(0,0,0,0.75);
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 @keyframes carousel{
     0%    { left:-5%; }
