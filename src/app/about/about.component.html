@@ -1,15 +1,18 @@
 <!-- <div>
   <p>This is the About component!</p>
 </div> -->
-
-  <div class="carousel">
-    <ul class="slides">
-      <li *ngFor="let image of images">
-        <h2>{{image.title}}</h2>
-        <img src="{{image.url}}" alt="Northland Chorale show">
-      </li>
-    </ul>
+<div class="container center">
+  <div class="row">
+    <div class="carousel center">
+      <ul class="slides">
+        <li *ngFor="let image of images">
+          <h2>{{image.title}}</h2>
+          <img src="{{image.url}}" alt="Northland Chorale show">
+        </li>
+      </ul>
+    </div>
   </div>
+</div>
 
 <h2>Who We Are</h2>
 <br>

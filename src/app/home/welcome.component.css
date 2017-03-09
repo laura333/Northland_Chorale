@@ -37,3 +37,22 @@
     background-attachment: scroll;
   }
 }
+
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #88afaa;
+    border-color: #ddd;
+}
+
+.panel-body {
+    padding: 15px;
+    background-color: #dae8e6;
+}
+
+.panel-footer {
+    padding: 10px 15px;
+    background-color: #88afaa;
+    border-top: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}

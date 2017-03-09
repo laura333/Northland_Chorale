@@ -12,6 +12,11 @@
 
 
 /*carousel*/
+.center {
+    margin: auto;
+    width: 75%;
+    /*padding: 10px;*/
+}
 
 .carousel {
   overflow: hidden;
