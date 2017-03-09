@@ -15,7 +15,7 @@ export var PRODUCTS: Product[] = [
     "category": "Friday",
     "date": "April 7, 2017",
     "time": "7:30 p.m.",
-    "description": "Senior/Student Ticket",
+    "description": "Senior / Student Ticket",
     "price": 12,
     "capacity": 150
   },

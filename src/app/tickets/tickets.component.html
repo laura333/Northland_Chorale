@@ -19,70 +19,24 @@
   <p>DL Parsons Theatre <br> 11801 Community Center Drive <br> Northglenn, CO 80233 <br> 303.450.8800 <br> <a href="http://www.dlparsonstheatre.org" target="blank">www.dlparsonstheatre.org</a>
   </p>
 </div>
-<!-- <div class="row">
-  <div class="product-list-header col-sm-12 col-md-10 col-md-offset-1">
-    <div id="acordeon">
-        <div class="panel-group" id="accordion">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-target="collapseOne" href="collapseOne" data-toggle="gsdk-collapse">
-                  Friday, April 7, 2017
-                </a>
-              </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse">
-              <div class="panel-body">
 
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-target="#collapseTwo" href="#collapseTwo" data-toggle="gsdk-collapse">
-                  Collapsible Group Item #2
-                </a>
-              </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse">
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" href="#collapseThree">
-                  Collapsible Group Item #3
-                </a>
-              </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse">
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-        </div>
-    </div> -->
-<!-- end acordeon -->
-<!-- </div>
-</div> -->
 <div class="row">
-  <div class="product-list col-md-10 col-md-offset-1">
-    <div class="row product-item" *ngFor="let product of products">
-      <div class="col-md-8">
+  <div class="product-list">
+    <div class="product-item col-md-4" *ngFor="let product of products">
+      <div class="card">
         <h3>{{product.category}}, {{product.description}}</h3>
         <div class="small">
           <h4>{{product.date}}, {{product.time}}</h4>
+          <p class="product-price">{{product.price|currency:'USD':true}}</p>
+          <a [routerLink]="['/cart']">
+            <button class="btn btn-primary add-to-cart-button" (click)="appendItem(product)">Add to cart</button>
+          </a>
           <hr>
         </div>
       </div>
       <!-- end of left column -->
 
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <div class="row">
           <p class="product-price">{{product.price|currency:'USD':true}}</p>
         </div>
@@ -91,9 +45,8 @@
             <button class="btn btn-primary add-to-cart-button" (click)="appendItem(product)">Add to cart</button>
           </a>
         </div>
-      </div>
+      </div> -->
       <!-- end of right column -->
-
     </div>
   </div>
 </div>
