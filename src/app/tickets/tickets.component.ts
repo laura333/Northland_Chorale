@@ -27,22 +27,17 @@ export class TicketsComponent implements OnInit {
     this.getProducts();
   }
 
-  fiter(): void {
-    this.visableProducts = this.products.filter(product => product.description.toLowerCase().includes(this.filterVal.toLowerCase()));
-  }
-
   onSelect(product: Product): void {
     this.selectedProduct = product;
   }
 
   appendItem(product: Product): void {
-    // get the cart entry for the product
+    // get cart entry for product
     this.cartService.getCartEntryByProductId(product.id).then(function(cartEntry: CartEntity) {
 
       // if product quantity hasn't been exeeded
       if (this.checkIfCapacityIsExeeded(cartEntry)) {
         this.cartService.addProductToCart(product);
-        // this.router.navigate(['cart']);
       } else {
         // TODO: change this to a modal later
         alert("We are sold out of tickets. You currently have " + cartEntry.quantity + " of tickets in your cart. We have these dates available " + cartEntry.product.capacity);
@@ -56,10 +51,6 @@ export class TicketsComponent implements OnInit {
     return cartEntry == undefined || (cartEntry.quantity + 1 <= cartEntry.product.capacity)
   }
 
-  // getProducts(): void {
-  //   this.productService.getProducts().then(products => this.products = products);
-  // }
-
   getProducts(): void {
     this.productService.getProducts().then(function(result) {
       this.products = result;
@@ -68,4 +59,5 @@ export class TicketsComponent implements OnInit {
       alert("Oops. Something went wrong while fetching the tickets.");
     });
   }
+
 }

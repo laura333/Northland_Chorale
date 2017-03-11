@@ -2,28 +2,51 @@
   {{title}}
 </h1> -->
 
-<div>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+<!-- <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header navbar-inverse">
+      <button type="button" [attr.data-target]="navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
       <a class="navbar-brand" [routerLink]="['/welcome']">
         <img src="../assets/img/note.png" width="35" height="35" alt="Home">
       </a>
+    </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a [routerLink]="['/about']">Who We Are</a></li>
         <li><a [routerLink]="['/tickets']">Show Info and Tickets</a></li>
       </ul>
-
-      <div id="navbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a [routerLink]="['/cart']"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-        </ul>
-      </div>
-
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/cart']"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
     </div>
-  </nav>
-  <div class="container">
-    <router-outlet></router-outlet>
   </div>
+</nav> -->
+
+<nav role="navigation" class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/welcome']">
+      <img src="../assets/img/note.png" width="35" height="35" alt="Home">
+    </a>
+    <ul class="nav navbar-nav">
+      <li><a [routerLink]="['/about']">Who We Are</a></li>
+      <li><a [routerLink]="['/tickets']">Show Info and Tickets</a></li>
+    </ul>
+
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink]="['/cart']"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
 
 <div id="footer" class="">
@@ -31,7 +54,8 @@
     <p><button class="btn-primary" type="submit">
       <a href="mailto:northlandchorale@me.com"><i class="fa fa-envelope"></i> Email Us!</a>
     </button>
-      <a href="https://www.facebook.com/northlandchorale/" target="_blank"> <i class="fa fa-facebook-square fa-3x pull-right" aria-hidden="true"></i></a></p>
+      <a href="https://www.facebook.com/northlandchorale/" target="_blank"> <i class="fa fa-facebook-square fa-3x pull-right" aria-hidden="true"></i></a>
+    </p>
     <p class="contact">720.515.4NLC (4652)</p><br>
     <p class="contact">©️Northland Chorale 2017</p>
   </div>

@@ -6,14 +6,16 @@
 
 .media-body {
   padding-left: 10px;
+  width: 100%;
 }
 
-.break {
-  padding-bottom: 50px;
-}
+/*.vertical-line {
+  margin-top: 20px;
+  border-right: thin dotted #2b669a;
+}*/
 
-div.card {
-  width: auto;
+/*div.card {
+  width: 100%;
   height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -24,6 +26,20 @@ div.card {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
+  background-color: #dae8e6;
+}*/
+
+.cast {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  padding-top: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   background-color: #dae8e6;
 }
 
@@ -47,9 +63,9 @@ div.card {
   overflow: hidden;
   /* Clear floats */
   /* Slide effect Animations*/
-  -moz-animation: carousel 30s infinite;
-  -webkit-animation: carousel 30s infinite;
-  animation: carousel 30s infinite;
+  -moz-animation: carousel 50s infinite;
+  -webkit-animation: carousel 50s infinite;
+  animation: carousel 50s infinite;
 }
 
 .slides>li {

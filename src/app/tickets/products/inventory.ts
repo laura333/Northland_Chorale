@@ -15,7 +15,7 @@ export var PRODUCTS: Product[] = [
     "category": "Friday",
     "date": "April 7, 2017",
     "time": "7:30 p.m.",
-    "description": "Senior / Student Ticket",
+    "description": "Senior Ticket",
     "price": 12,
     "capacity": 150
   },
@@ -28,15 +28,15 @@ export var PRODUCTS: Product[] = [
     "price": 8,
     "capacity": 150
   },
-  {
-    "id": 4,
-    "category": "Friday",
-    "date": "April 7, 2017",
-    "time": "7:30 p.m.",
-    "description": "Group Ticket",
-    "price": 10,
-    "capacity": 150
-  },
+  // {
+  //   "id": 4,
+  //   "category": "Friday",
+  //   "date": "April 7, 2017",
+  //   "time": "7:30 p.m.",
+  //   "description": "Group Ticket",
+  //   "price": 10,
+  //   "capacity": 150
+  // },
   {
     "id": 5,
     "category": "Saturday",
@@ -51,7 +51,7 @@ export var PRODUCTS: Product[] = [
     "category": "Saturday",
     "date": "April 8, 2017",
     "time": "7:30 p.m.",
-    "description": "Senior/Student Ticket",
+    "description": "Senior Ticket",
     "price": 12,
     "capacity": 150
   },
@@ -64,15 +64,16 @@ export var PRODUCTS: Product[] = [
     "price": 8,
     "capacity": 150
   },
+  // {
+  //   "id": 8,
+  //   "category": "Saturday",
+  //   "date": "April 8, 2017",
+  //   "time": "7:30 p.m.",
+  //   "description": "Group Ticket",
+  //   "price": 10,
+  //   "capacity": 150
+  // },
   {
-    "id": 8,
-    "category": "Saturday",
-    "date": "April 8, 2017",
-    "time": "7:30 p.m.",
-    "description": "Group Ticket",
-    "price": 10,
-    "capacity": 150
-  }, {
     "id": 9,
     "category": "Sunday",
     "date": "April 9, 2017",
@@ -86,7 +87,7 @@ export var PRODUCTS: Product[] = [
     "category": "Sunday",
     "date": "April 9, 2017",
     "time": "7:30 p.m.",
-    "description": "Senior/Student Ticket",
+    "description": "Senior Ticket",
     "price": 12,
     "capacity": 150
   },
@@ -98,14 +99,14 @@ export var PRODUCTS: Product[] = [
     "description": "Child Ticket",
     "price": 8,
     "capacity": 150
-  },
-  {
-    "id": 12,
-    "category": "Sunday",
-    "date": "April 9, 2017",
-    "time": "7:30 p.m.",
-    "description": "Group Ticket",
-    "price": 10,
-    "capacity": 150
   }
+  // {
+  //   "id": 12,
+  //   "category": "Sunday",
+  //   "date": "April 9, 2017",
+  //   "time": "7:30 p.m.",
+  //   "description": "Group Ticket",
+  //   "price": 10,
+  //   "capacity": 150
+  // }
 ];

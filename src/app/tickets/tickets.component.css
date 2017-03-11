@@ -21,6 +21,7 @@ button, input, select, textarea {
   margin-right: auto;
   background-color: rgb(22, 112, 101);
   padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 div.product-list {
@@ -28,13 +29,14 @@ div.product-list {
 }
 
 div.card {
-  width: 350px;
-  height: 200px;
+  width: 100%;
+  height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   margin-top: 30px;
   margin-right: 30px;
   margin-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 1px;
+  padding-bottom: 20px;
   background-color: #dae8e6;
 }
